@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--Very-dark-blue-main-BG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+main {
+    background-color: var(--Very-dark-blue-card-BG);
+    padding: 1.5rem;
+    width: 23rem;
+    border-radius: 1rem;
+}
+
+.card_image {
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.equilibrium_photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+.card_image:hover{
+    cursor: pointer;
+}
+
+.view_icon{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    border-radius: 0.5rem;
+}
+
+.card_image:hover .view_icon{
+    opacity: 1;
+}
+
+.card_details h1 {
+    color: var(--White);
+    margin-bottom: 1rem;
+}
+
+.card_details p {
+    color: var(--Soft-blue);
+    font-size: 18px;
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+    line-height: 1.8rem;
+}
+
+.card_timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.card_timeline p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_timeline p span {
+    color: var(--Cyan);
+}
+
+.icons {
+    margin-right: 0.5rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--Very-dark-blue-line);
+}
+
+.card_profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--Soft-blue);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.card_profile img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.card_profile p span {
+    color: var(--White);
+}
+
+.card_profile p span:hover, .card_details h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+@media screen and (max-width:425px) {
+    
+    main{
+        width: 18rem;
+    }
+}
